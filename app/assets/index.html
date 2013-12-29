@@ -1,0 +1,106 @@
+<!doctype html class="scroll-enabled">
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en">
+<![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8" lang="en">
+<![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9" lang="en">
+<![endif]-->
+<!--[if gt IE 8]>
+<html class="no-js" lang="en">
+<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>
+        App Title
+    </title>
+    <meta name="viewport" content="width=device-width">
+
+    <!-- CSS Dependencies -->
+    <link rel="stylesheet" href="stylesheets/app.css">
+
+</head>
+
+<body data-device="phone" data-position="fixed">
+    <section id="layout" data-transition="slide">
+        <header class="nav">
+            <nav>
+                <a href="#" class="slider" data-view-aside="side-drawer" data-icon="menu"></a>
+            </nav>
+            <h1 class="title centered">
+                Moby
+            </h1>
+            <nav class="on-right">
+                <a href="#"><span class="icon user"></span></a>
+            </nav>
+        </header>
+        <nav data-control="groupbar" class="groupbar">
+            <a href="#" data-view-article="layout-art1" data-label="Tab One&nbsp;" class="active"></a>
+            <a href="#" data-view-article="layout-art2" data-label="Tab Two&nbsp;"></a>
+            <a href="#" data-view-article="layout-art3" data-label="Tab Three"></a>
+            <a href="#" data-view-article="layout-art4" data-label="Tab Four"></a>
+        </nav>
+        <article id="layout-art1">
+            <div class="empty">
+                </span>
+                <strong class="welcome">
+                    Welcome to Brunch with Moby!
+                </strong>
+                <br>
+                 <strong class="description">
+                    This is a starter template coupled with an efficient workflow to get you quickly up and running with your own mobile app. 
+                </strong>
+                <button class="anchor" data-view-section="page_two">
+                    Go To Next Page
+                </button>
+            </div>
+        </article>
+        <article id="layout-art2">
+            <div class="empty">
+                </span>
+                <strong>
+                    Tab Two
+                </strong>
+
+            </div>
+        </article>
+        <article id="layout-art3">
+            <div class="empty">
+                </span>
+                <strong>
+                    Tab Three
+                </strong>
+
+            </div>
+        </article>
+        <article id="layout-art4">
+            <div class="empty">
+                </span>
+                <strong>
+                    Tab Four
+                </strong>
+
+            </div>
+        </article>
+        <footer>
+            <h1 class="title centered">
+                Sticky Footer
+            </h1>
+        </footer>
+    </section>
+</body>
+
+<!-- JS Dependencies -->
+<script src="javascripts/vendor.js"></script>
+<script src="javascripts/app.js"></script>
+
+<!-- Start application -->
+<script>
+    require('initialize');
+</script>
+
+</html>
