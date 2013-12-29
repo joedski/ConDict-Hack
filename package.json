@@ -28,7 +28,8 @@
     "coffeelint-brunch": "~1.5.0",
     "imageoptmizer-brunch": "0.0.3",
     "groundskeeper-brunch": "0.0.3",
-    "after-brunch": "0.0.4"
+    "after-brunch": "0.0.4",
+    "iced-coffee-script-brunch": "~1.6.0"
   },
   "license": "BSD",
   "devDependencies": {
