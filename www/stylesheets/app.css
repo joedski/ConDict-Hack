@@ -639,7 +639,7 @@ body[data-device="tablet"] > section[data-transition="slide"][data-direction="ba
  *
  * @author Javier Jimenez Villar <javi@tapquo.com> || @soyjavi
  */
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
+/*@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,700");*/
 body {
   background-color: #000;
   color: #f4f4f4;
@@ -2001,6 +2001,66 @@ body > section > article > .empty > strong {
 body {
   margin: 0;
   padding: 0; }
+
+body > section {
+  background: white; }
+
+html.ios7 body:before {
+  box-sizing: border-box;
+  content: "";
+  display: block;
+  background: rgba(255, 255, 255, 0.7);
+  height: 20px;
+  width: 100%;
+  z-index: 1000000;
+  position: absolute;
+  top: 0px;
+  left: 0px; }
+html.ios7 body > section, html.ios7 body > aside {
+  padding-top: 20px; }
+
+em {
+  font-style: italic; }
+
+li p em {
+  font-weight: 300; }
+
+/* FONTS!  WHO WANTS TO DEFINE QUASIMODO'S FONTS */
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../font/OpenSans-Light.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 300;
+  src: url("../font/OpenSans-LightItalic.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../font/OpenSans-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url("../font/OpenSans-Italic.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../font/OpenSans-Bold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 700;
+  src: url("../font/OpenSans-BoldItalic.ttf") format("truetype"); }
 
 .nav {
   background-color: white;

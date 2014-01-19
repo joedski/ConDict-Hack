@@ -1,32 +1,16 @@
-# Brunch with PhoneGap and Lungo
-This is a template for building fast HTML5 mobile apps. It uses [PhoneGap](http://phonegap.com/) for compiling/supporting different devices, [Lungo.js](http://lungo.tapquo.com/) for the mobile application framework, [Brunch.io](http://brunch.io/) for work-flow/application assembly and a little of my own optimizations, structure, and modules.
+# ConDict - Simple Dictionary App
 
-I'm pretty opinionated with my modules and views, so if you want to do it your own way just move `app/views/styles` up a directory and delete the `app/views` and `app/modules` folders along with the accompanying code in `application.coffee`.
+ConDict is a simple dictionary app that was initially slapped together in a 4-hour hackathon before leaving on a family Christmas trip, and was cleaned up to a degree upon return.  I use it as an aid in my secret vice of language construction, although as built it's not all tha flexible, supporting only the dictionary it was compiled with, and is read-only.
 
-Main languages are [CoffeeScript](http://coffeescript.org/) and [Sass](http://sass-lang.com/).
+## Skeleton
 
-Contributors welcome!
+This was made starting with the Brunch with Moby skeleton, gh:connorblack/brunch-with-moby.  I'm not sure how I feel about having both QuoJS and jQuery at the same time.  Maybe next time I should just switch to MonocleJS if I want to do anything with Quo.
 
-### Getting started
-* Install node: Go to http://nodejs.org/ and use their installer
-* Install brunch: `npm install -g brunch`
-* Create project: `brunch new gh:connorblack/brunch-with-moby <project name>`
-* Move into folder: `cd <project name>`
-* Install dependencies: `npm install`
-* Build project and start server: `brunch w -s`
-* Project should now be running on `http://localhost:3000/`
-* To get it started with PhoneGap visit http://phonegap.com/install/
+## Considerations for next time
 
-Also, for in-browser development check out the Dimensions app: http://www.dimensionsapp.com/
-
-### Other
-Software the skeleton uses:
-
-* [jQuery](http://jquery.com/) - general web development utilities
-* [QuoJS](http://quojs.tapquo.com/) - awesome mobile gestures
-
-### Legal Stuff (MIT License)
-
-Distributed under MIT license.
-
-Enjoy!
+* If a vendor lib's source is in CoffeeScript and Stylus or SASS/SCSS, then import that rather than leaving them as the precompiled JS and CSS.  Easier to debug.
+* Don't try to use anything with Backbone but jQuery or Zepto. (Or whatever else they mention on their site.)  Although the fixes to Backbone to make it play nice with (an old version of!) QuoJS weren't that bad, that's a good few hours lost to something silly.
+* Dropbox integration using the Dropbox app sync thingy plugin so that ConDict has its own folder in the main Dropbox folder to make it easy to upload and download dictionaries.
+* GitHub integration...?
+* Use Sencha Touch or Zepto/Backbone.
+* For Zepto/Backbone, don't feel that the templates to be in the class file.  Precompiled handlebars templates are fine.  Just because CoffeeScript has multiline strings...

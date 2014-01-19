@@ -9,6 +9,27 @@ body
 	margin: 0
 	padding: 0
 
+body > section
+	background: white
 
+html.ios7
+	body:before
+		box-sizing: border-box
+		content: ""
+		display: block
+		background: hsla(0,0%,100%,0.7)
+		height: 20px
+		width: 100%
+		z-index: 1000000
+		position: absolute
+		top: 0px
+		left: 0px
 
+	body > section, body > aside
+		padding-top: 20px
 
+em
+	font-style: italic
+
+li p em
+	font-weight: 300

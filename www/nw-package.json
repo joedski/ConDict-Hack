@@ -1,0 +1,24 @@
+// NodeWebkit package.json
+{
+  "main": "index.html",
+  "name": "ConDict",
+  "description": "A dictionary viewing and editing application for conlangery.  May be useful for real languages, too.",
+  "version": "0.0.0",
+  "keywords": [ "dictionary", "conlang" ],
+  "window": {
+    "title": "ConDict",
+    "icon": "link.png",
+    "toolbar": false,
+    "frame": false,
+    "width": 400,
+    "height": 600,
+    "position": "mouse",
+    "min_width": 400,
+    "min_height": 600,
+    "max_width": 600,
+    "max_height": 900
+  },
+  "webkit": {
+    "plugin": true
+  }
+}

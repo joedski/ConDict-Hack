@@ -3,8 +3,9 @@
     - Main application class
 
     Responsible for initialization and bridging modules and views.
-
 ###
+
+# Backbone = require 'Backbone'
 
 class Application
 
@@ -12,23 +13,25 @@ class Application
         
         # Initialize lungo
         Lungo.init(
-
             # Load your templates here
             resources: [
                 'templates/asides/side_drawer.html'
                 'templates/sections/page_two.html'
+                'templates/sections/word_page.html'
             ]
         )
 
         # Initialize your modules independently (easier for configuration)
-        @init_vent()
-        @init_user()
+        @initVent()
+        @initModel()
+
+        # @init_user()
 
         # Initialize your views collectively
-        @init_views()
+        @initViews()
 
         # Emit that application is ready - vent example
-        @vent.internal.trigger('application_ready')
+        @vent.internal.trigger 'application_ready'
 
 
     ### Initializers ###
@@ -43,22 +46,29 @@ class Application
 
     # Modules
 
-    init_vent: () ->
+    initVent: () ->
 
         Vent = require './modules/vent/vent'
         @vent = new Vent()
 
-    init_user: () ->
+    # init_user: () ->
 
-        User = require './modules/user/user'
-        @user = new User()
+    #     User = require './modules/user/user'
+    #     @user = new User()
+
+    initModel: () ->
+
+        Dictionary = require './modules/dictionary/dictionary'
+        @model =
+            dictionary: new Dictionary "Rrnake.json"
+
 
     # Views
 
-    init_views: () ->
+    initViews: () ->
 
         MainView = require './views/MainView'
-        @mainview = new MainView()
+        @mainview = new MainView( model: @model )
 
 
 module.exports = new Application()

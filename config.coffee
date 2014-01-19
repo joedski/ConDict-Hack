@@ -16,8 +16,11 @@ exports.config =
         before: [
           'vendor/scripts/console-helper.js'
           'vendor/scripts/jquery.js'
-          'vendor/scripts/quo.js'
+          'vendor/scripts/quo.debug.js'
           'vendor/scripts/lungo.js'
+          'vendor/scripts/lodash.js'
+          'vendor/scripts/lodash.collectDeep.js'
+          'vendor/scripts/backbone.js'
         ]
         after: [
         ] 
@@ -36,5 +39,8 @@ exports.config =
   plugins:
     afterBrunch: [
       # insert commands to run here.
-      "pwd"
+      "bash after_brunch/copy-to-places.bash"
     ]
+    handlebars:
+      include:
+        runtime: false
