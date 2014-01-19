@@ -14,3 +14,11 @@ This was made starting with the Brunch with Moby skeleton, gh:connorblack/brunch
 * GitHub integration...?
 * Use Sencha Touch or Zepto/Backbone.
 * For Zepto/Backbone, don't feel that the templates to be in the class file.  Precompiled handlebars templates are fine.  Just because CoffeeScript has multiline strings...
+
+## Legal
+
+Code I wrote is distributed under the [WTFPL](http://www.wtfpl.net/).
+
+Original Skeleton distributed under MIT License.
+
+All libraries under their respective licenses.
